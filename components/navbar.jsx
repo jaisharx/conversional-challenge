@@ -1,6 +1,3 @@
-import Example1 from 'data/data.json';
-import Example2 from 'data/data2.json';
-
 import { Box, HStack, Select } from '@chakra-ui/react';
 
 import NextImage from 'next/image';
