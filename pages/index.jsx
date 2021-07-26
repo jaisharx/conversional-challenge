@@ -5,14 +5,14 @@ import { Container } from '@chakra-ui/react';
 import { useState } from 'react';
 import Navbar from 'components/navbar';
 
-import ModalComponent from 'components/ModalComponent';
-import BoxComponent from 'components/BoxComponent';
-import ButtonComponent from 'components/ButtonComponent';
-import H1Component from 'components/H1Component';
-import H2Component from 'components/H2Component';
-import LinkComponent from 'components/LinkComponent';
-import ListComponent from 'components/ListComponent';
-import ParagraphComponent from 'components/ParagraphComponent';
+import ModalComponent from 'primitives/ModalComponent';
+import BoxComponent from 'primitives/BoxComponent';
+import ButtonComponent from 'primitives/ButtonComponent';
+import H1Component from 'primitives/H1Component';
+import H2Component from 'primitives/H2Component';
+import LinkComponent from 'primitives/LinkComponent';
+import ListComponent from 'primitives/ListComponent';
+import ParagraphComponent from 'primitives/ParagraphComponent';
 import traverseData from 'utils/traverseData';
 
 function getExampleDataFromKey(key, allExamples) {
