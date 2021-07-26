@@ -13,19 +13,21 @@ import traverseData from 'utils/traverseData';
 import { Container, Heading, HStack } from '@chakra-ui/react';
 
 export default function HomePage() {
+    const allComps = [
+        ModalComponent,
+        BoxComponent,
+        ButtonComponent,
+        H1Component,
+        H2Component,
+        LinkComponent,
+        ListComponent,
+        ParagraphComponent,
+    ];
+
     return (
         <>
             <Container maxW="container.lg">
-                {traverseData(Example1, [
-                    ModalComponent,
-                    BoxComponent,
-                    ButtonComponent,
-                    H1Component,
-                    H2Component,
-                    LinkComponent,
-                    ListComponent,
-                    ParagraphComponent,
-                ])}
+                {traverseData(Example1, allComps)}
             </Container>
         </>
     );
