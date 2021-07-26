@@ -1,9 +1,5 @@
-import React from 'react'
+import { Heading } from '@chakra-ui/react';
 
-export default function H2Component() {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function H2Component({ text }) {
+    return <Heading as="h2">{text}</Heading>;
 }
