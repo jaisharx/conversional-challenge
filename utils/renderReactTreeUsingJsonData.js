@@ -12,20 +12,16 @@ function loopOnObjects(obj) {
     return comps;
 }
 
-function renderer(data, components) {
+function renderReactTreeUsingJsonData(data, components) {
     const el = getComponentFromName(data.Content.type, components);
     return React.createElement(
-        el, // root element
+        el, // element
         data.Content.props && { ...data.Content.props }, // props,
         data.Children &&
             loopOnObjects(data.Children).map((comp) =>
-                renderer(comp, components)
+                renderReactTreeUsingJsonData(comp, components)
             )
     );
 }
 
-function traverseData(data, components) {
-    return renderer(data, components);
-}
-
-export default traverseData;
+export default renderReactTreeUsingJsonData;
