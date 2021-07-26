@@ -1,9 +1,12 @@
-import React from 'react'
+import { Button } from '@chakra-ui/react';
 
-export default function ButtonComponent() {
+export default function ButtonComponent({ text }) {
     return (
-        <div>
-            
-        </div>
-    )
+        <Button
+            colorScheme="green"
+            onClick={() => console.log('Button Clicked!')}
+        >
+            {text}
+        </Button>
+    );
 }
