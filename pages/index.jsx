@@ -1,9 +1,9 @@
-import Example1 from 'data/data.json';
-import Example2 from 'data/data2.json';
-
 import { Container } from '@chakra-ui/react';
 import { useState } from 'react';
 import Navbar from 'components/navbar';
+
+import Example1 from 'data/data.json';
+import Example2 from 'data/data2.json';
 
 import ModalComponent from 'primitives/ModalComponent';
 import BoxComponent from 'primitives/BoxComponent';
@@ -13,7 +13,7 @@ import H2Component from 'primitives/H2Component';
 import LinkComponent from 'primitives/LinkComponent';
 import ListComponent from 'primitives/ListComponent';
 import ParagraphComponent from 'primitives/ParagraphComponent';
-import traverseData from 'utils/traverseData';
+import renderReactTreeUsingJsonData from 'utils/renderReactTreeUsingJsonData';
 
 function getExampleDataFromKey(key, allExamples) {
     if (key === 'Example1') return allExamples[0];
@@ -43,7 +43,7 @@ export default function HomePage() {
                 setSelectedExample={setSelectedExample}
             />
             <Container maxW="container.lg" mt="4">
-                {traverseData(
+                {renderReactTreeUsingJsonData(
                     getExampleDataFromKey(selectedExample, allExamples),
                     allComps
                 )}
