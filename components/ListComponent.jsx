@@ -1,9 +1,11 @@
-import React from 'react'
+import { UnorderedList, ListItem } from '@chakra-ui/react';
 
-export default function ListComponent() {
+export default function ListComponent({ li }) {
     return (
-        <div>
-            
-        </div>
-    )
+        <UnorderedList>
+            {li.map((text) => (
+                <ListItem>{text}</ListItem>
+            ))}
+        </UnorderedList>
+    );
 }
