@@ -1,9 +1,5 @@
-import React from 'react'
+import { Text } from '@chakra-ui/react';
 
-export default function ParagraphComponent() {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function ParagraphComponent({ text }) {
+    return <Text>{text}</Text>;
 }
