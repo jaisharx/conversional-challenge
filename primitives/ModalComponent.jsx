@@ -1,4 +1,5 @@
 import {
+    Button,
     Modal,
     ModalOverlay,
     ModalContent,
@@ -6,12 +7,10 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-    Button,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { LoremIpsum } from 'react-lorem-ipsum';
 
-export default function ModalComponent({ isOpen }) {
+export default function ModalComponent({ isOpen, children }) {
     const [isModalOpen, setIsModalOpen] = useState(isOpen);
 
     return (
@@ -20,9 +19,7 @@ export default function ModalComponent({ isOpen }) {
             <ModalContent>
                 <ModalHeader>Modal Title</ModalHeader>
                 <ModalCloseButton />
-                <ModalBody>
-                    <LoremIpsum p={1} />
-                </ModalBody>
+                <ModalBody>{children}</ModalBody>
 
                 <ModalFooter>
                     <Button
@@ -32,7 +29,6 @@ export default function ModalComponent({ isOpen }) {
                     >
                         Close
                     </Button>
-                    <Button variant="ghost">Secondary Action</Button>
                 </ModalFooter>
             </ModalContent>
         </Modal>
