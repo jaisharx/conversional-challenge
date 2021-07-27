@@ -16,7 +16,9 @@ function useModal(initalModalState) {
     const { isModalOpen, setIsModalOpen } = useContext(ModalContext);
 
     useEffect(() => {
-        setIsModalOpen(initalModalState);
+        if (initalModalState) {
+            setIsModalOpen(initalModalState);
+        }
     }, []);
 
     return { isModalOpen, setIsModalOpen };
