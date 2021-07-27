@@ -1,9 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import { ModalProvider } from 'contexts/modal-context';
 
 function MyApp({ Component, pageProps }) {
     return (
         <ChakraProvider>
-            <Component {...pageProps} />
+            <ModalProvider>
+                <Component {...pageProps} />
+            </ModalProvider>
         </ChakraProvider>
     );
 }
