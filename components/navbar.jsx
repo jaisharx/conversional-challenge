@@ -24,6 +24,7 @@ export default function Navbar({ selectedExample, setSelectedExample }) {
             >
                 <option value="Example1">Example 1</option>
                 <option value="Example2">Example 2</option>
+                <option value="Example3">Example 3</option>
             </Select>
         </HStack>
     );

@@ -4,6 +4,7 @@ import Navbar from 'components/navbar';
 
 import Example1 from 'data/data.json';
 import Example2 from 'data/data2.json';
+import Example3 from 'data/data3.json';
 
 import ModalComponent from 'primitives/ModalComponent';
 import BoxComponent from 'primitives/BoxComponent';
@@ -18,6 +19,7 @@ import renderReactTreeUsingJsonData from 'utils/renderReactTreeUsingJsonData';
 function getExampleDataFromKey(key, allExamples) {
     if (key === 'Example1') return allExamples[0];
     if (key === 'Example2') return allExamples[1];
+    if (key === 'Example3') return allExamples[2];
 }
 
 export default function HomePage() {
@@ -34,7 +36,7 @@ export default function HomePage() {
         ParagraphComponent,
     ];
 
-    const allExamples = [Example1, Example2];
+    const allExamples = [Example1, Example2, Example3];
 
     return (
         <>
