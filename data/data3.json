@@ -46,7 +46,8 @@
 					"Content": {
 						"type": "ButtonComponent",
 						"props": {
-							"text": "Click me to open the modal"
+							"text": "Click me to open the modal",
+                            "doesOpenModal": true
 						}
 					}
 				},
@@ -54,6 +55,7 @@
 					"Content": {
 						"type": "LinkComponent",
 						"props": {
+                            "doesOpenModal": true,
 							"url": "https://lmgtfy.com/",
 							"text": "I open a link but I should also open the modal."
 						}
