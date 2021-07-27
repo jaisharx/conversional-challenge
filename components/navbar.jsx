@@ -1,7 +1,5 @@
 import { Box, HStack, Select } from '@chakra-ui/react';
-
-import NextImage from 'next/image';
-import reactImageSrc from 'public/react.png';
+import ReactJSIcon from './icons/reactjs';
 
 export default function Navbar({ selectedExample, setSelectedExample }) {
     return (
@@ -15,7 +13,7 @@ export default function Navbar({ selectedExample, setSelectedExample }) {
             justify="space-between"
         >
             <Box maxW="12">
-                <NextImage src={reactImageSrc} />
+                <ReactJSIcon />
             </Box>
             <Select
                 w="40"
