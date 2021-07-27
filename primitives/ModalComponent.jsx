@@ -23,7 +23,6 @@ export default function ModalComponent({ isOpen, children }) {
 
                 <ModalFooter>
                     <Button
-                        mr={3}
                         colorScheme="blue"
                         onClick={() => setIsModalOpen(false)}
                     >
