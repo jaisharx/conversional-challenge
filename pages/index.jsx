@@ -25,16 +25,16 @@ function getExampleDataFromKey(key, allExamples) {
 export default function HomePage() {
     const [selectedExample, setSelectedExample] = useState('Example1');
 
-    const allComps = [
-        ModalComponent,
-        BoxComponent,
-        ButtonComponent,
-        H1Component,
-        H2Component,
-        LinkComponent,
-        ListComponent,
-        ParagraphComponent,
-    ];
+    const allComps = {
+        ModalComponent: ModalComponent,
+        BoxComponent: BoxComponent,
+        ButtonComponent: ButtonComponent,
+        H1Component: H1Component,
+        H2Component: H2Component,
+        LinkComponent: LinkComponent,
+        ListComponent: ListComponent,
+        ParagraphComponent: ParagraphComponent,
+    };
 
     const allExamples = [Example1, Example2, Example3];
 

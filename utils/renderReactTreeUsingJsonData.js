@@ -1,7 +1,8 @@
 import React from 'react';
 
 function getComponentFromName(name, components) {
-    return components.find((component) => component.name === name);
+    const foundKey = Object.keys(components).find((key) => key === name);
+    return components[foundKey];
 }
 
 function loopOnObjects(obj) {
