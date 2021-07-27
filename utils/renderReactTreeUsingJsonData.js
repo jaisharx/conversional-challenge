@@ -16,11 +16,12 @@ function renderReactTreeUsingJsonData(data, components) {
     const el = getComponentFromName(data.Content.type, components);
     return React.createElement(
         el, // element
-        data.Content.props && { ...data.Content.props }, // props,
-        data.Children &&
-            loopOnObjects(data.Children).map((comp) =>
-                renderReactTreeUsingJsonData(comp, components)
-            )
+        data.Content.props ? { ...data.Content.props } : null, // props,
+        data.Children
+            ? loopOnObjects(data.Children).map((comp) =>
+                  renderReactTreeUsingJsonData(comp, components)
+              )
+            : null
     );
 }
 
