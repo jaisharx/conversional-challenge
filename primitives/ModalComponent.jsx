@@ -8,10 +8,10 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useModal } from 'contexts/modal-context';
 
 export default function ModalComponent({ isOpen, children }) {
-    const [isModalOpen, setIsModalOpen] = useState(isOpen);
+    const { isModalOpen, setIsModalOpen } = useModal(isOpen);
 
     return (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
