@@ -15,7 +15,7 @@ function ModalProvider({ children }) {
   )
 }
 
-function useModal(initalModalState) {
+function useModal(initalModalState = false) {
   const { isModalOpen, setIsModalOpen } = useContext(ModalContext)
 
   useEffect(() => {
