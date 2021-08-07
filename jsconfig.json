@@ -1,9 +1,0 @@
-{
-    "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "baseUrl": ".",
-        "allowSyntheticDefaultImports": true
-    },
-    "exclude": ["dist", ".next", "node_modules"]
-}
