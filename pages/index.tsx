@@ -16,14 +16,14 @@ import ListComponent from 'primitives/ListComponent';
 import ParagraphComponent from 'primitives/ParagraphComponent';
 import renderReactTreeUsingJsonData from 'utils/renderReactTreeUsingJsonData';
 
-function getExampleDataFromKey(key, allExamples) {
+function getExampleDataFromKey(key: string, allExamples: any[]) {
     if (key === 'Example1') return allExamples[0];
     if (key === 'Example2') return allExamples[1];
     if (key === 'Example3') return allExamples[2];
 }
 
 export default function HomePage() {
-    const [selectedExample, setSelectedExample] = useState('Example1');
+    const [selectedExample, setSelectedExample] = useState<string>('Example1');
 
     const allComps = {
         ModalComponent: ModalComponent,
