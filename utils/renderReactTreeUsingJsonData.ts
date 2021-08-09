@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-function getComponentFromName(name, components) {
+function getComponentFromName(name: string, components: ReactElement[]) {
     const foundKey = Object.keys(components).find((key) => key === name);
     return components[foundKey];
 }
